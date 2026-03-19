@@ -16,8 +16,6 @@ venv/
 # Logs
 logs/
 
-# Large output files (PLY can be huge)
-output/maps/*.ply
 
 # Temp files
 temp/
