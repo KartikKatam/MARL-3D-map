@@ -1,0 +1,13 @@
+# cuVSLAM parameters for Isaac Sim stereo pipeline
+/**:
+  ros__parameters:
+    use_sim_time: true
+    rectified_images: true
+    enable_slam_visualization: true
+    enable_landmarks_view: true
+    enable_observations_view: true
+    enable_image_denoising: true
+    # Stereo camera parameters
+    input_base_frame: "camera_left"
+    input_left_camera_frame: "camera_left"
+    input_right_camera_frame: "camera_right"

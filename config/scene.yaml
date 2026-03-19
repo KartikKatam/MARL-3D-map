@@ -1,0 +1,33 @@
+# Scene geometry for Isaac Sim drone mapping demo
+ground:
+  size: [50.0, 50.0, 0.1]       # x, y, z thickness
+  position: [0.0, 0.0, -0.05]   # center (half-buried so top surface is at z=0)
+  color: [0.2, 0.6, 0.2]        # green
+
+house:
+  walls:
+    size: [8.0, 8.0, 6.0]
+    position: [0.0, 0.0, 3.0]   # bottom at z=0, top at z=6
+    color: [0.95, 0.95, 0.95]   # white
+  roof:
+    height: 2.0                  # cone height above walls
+    radius: 5.5                  # slightly wider than walls for overhang
+    position: [0.0, 0.0, 7.0]   # base at top of walls
+    color: [0.4, 0.25, 0.1]     # dark brown
+
+tree:
+  offset_from_house: [5.0, 5.0] # x, y offset from house center
+  trunk:
+    radius: 0.3
+    height: 4.0
+    position_z: 2.0             # center z (bottom at z=0)
+    color: [0.45, 0.3, 0.15]   # brown
+  canopy:
+    radius: 2.0
+    position_z: 5.6             # center z (above trunk top)
+    color: [0.15, 0.5, 0.15]   # darker green
+
+sidewalk:
+  size: [1.5, 7.0, 0.05]       # width, length, thickness
+  position: [6.5, 2.5, 0.025]  # between house and tree
+  color: [0.6, 0.6, 0.6]       # gray

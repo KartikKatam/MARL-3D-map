@@ -1,0 +1,15 @@
+# Circular orbit flight path for stereo SLAM mapping
+orbit:
+  center: [0.0, 0.0]       # x, y center (above house)
+  radius: 15.0              # meters
+  altitude: 5.5             # meters above ground
+  speed: 2.0                # m/s along orbit arc
+  direction: ccw            # counter-clockwise
+  num_waypoints: 360        # for debug printout only; follower is continuous
+
+camera:
+  baseline: 0.10            # 10cm stereo baseline
+  resolution: [640, 480]    # width, height
+  focal_length_mm: 1.93     # focal length in mm
+  hz: 30                    # publish rate
+  clipping: [0.1, 200.0]   # near, far clip planes

@@ -1,0 +1,64 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Displays:
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Value: true
+
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Landmarks
+      Enabled: true
+      Topic:
+        Value: /visual_slam/vis/landmarks_cloud
+        Reliability Policy: Best Effort
+      Color Transformer: FlatColor
+      Color: 85; 255; 127  # green
+      Size (Pixels): 3
+      Style: Points
+
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Observations
+      Enabled: true
+      Topic:
+        Value: /visual_slam/vis/observations_cloud
+        Reliability Policy: Best Effort
+      Color Transformer: FlatColor
+      Color: 255; 255; 85  # yellow
+      Size (Pixels): 2
+      Style: Points
+
+    - Class: rviz_default_plugins/Path
+      Name: Odometry Path
+      Enabled: true
+      Topic:
+        Value: /visual_slam/tracking/slam_path
+        Reliability Policy: Best Effort
+      Color: 255; 85; 85  # red
+
+    - Class: rviz_default_plugins/Image
+      Name: Left Camera
+      Enabled: true
+      Topic:
+        Value: /front_stereo_camera/left/image_rect_color
+        Reliability Policy: Best Effort
+
+  Global Options:
+    Fixed Frame: map
+    Frame Rate: 30
+
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 40
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 3
+      Name: Current View
+      Yaw: 0.785
+      Pitch: 0.5
